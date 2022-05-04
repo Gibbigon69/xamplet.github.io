@@ -1,0 +1,108 @@
+:root{
+    --dark: #0a0a0a;
+    --gray: #f6f6f6;
+    --light: #ffffff;
+}
+
+
+body{
+    font-family: 'Spartan', sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    background-color: var(--gray);
+}
+.navbar{
+    min-height: 5rem
+}
+
+.bg-light{  background-color: var(--light) !important;}
+.bg-gray{  background-color: var(--gray) !important;}
+.bg-dark{  background-color: var(--dark) !important;}
+
+.text-dark{ color: var(--dark) !important;}
+
+.py-6{
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+.btn{
+    padding: .75rem 1rem;
+    border-radius: .1rem;
+    font-weight: 700;
+}
+.btn-dark{ background-color: var(--dark) ;}
+
+.btn-outline-dark:hover{  background-color: var(--dark);}
+
+
+.play-icon{
+    width: 5rem;
+    height: 5rem;
+    box-shadow: 0 0 0 0 rgba(0,0,0,.5);
+    animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+    0%{
+        box-shadow: 0 0 0 0 rgba(0,0,0,.8);
+    }
+    70%{
+        box-shadow: 0 0 0 25px rgba(0,0,0,0);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba(0,0,0,0);
+    }
+}
+.hero{ 
+    background: linear-gradient(180deg, var(--gray) 70%, var(--light)0);
+}
+.modal-dialog{
+    max-width: 800px;
+    
+}
+.video-container{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.video.container::after{
+    padding-top: 56.25%;
+    display: block;
+    content: "";
+}
+.video-container iframe{
+    
+    top: 0;
+    left: 0;
+    width: 100%;
+   
+}
+button:focus{
+    outline: none;
+}
+
+
+
+.badge{
+    padding: .5rem 1rem;
+}
+.badge-secondary{
+    background-color: var(--gray);
+    color: var(--black);
+}
+@media (max-width: 768px){
+    .modal-dialog{
+        max-width: 500px;
+    }
+}
+@media (max-width: 576px){
+    .display-4{
+        font-size: 2.4rem;
+        
+    }
+    .btn{
+        width: 100%;
+    }
+    w-75{
+        width: 100% !important;
+    }
+}
